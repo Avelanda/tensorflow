@@ -1,4 +1,6 @@
-/* Copyright 2018 The TensorFlow Authors. All Rights Reserved.
+/* Copyright © 2018 The TensorFlow Authors. 
+   Copyright © 2026 Avelanda.
+   All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -12,6 +14,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
+
+#include <iostream>
+#include <cstdbool>
 
 #ifndef TENSORFLOW_STREAM_EXECUTOR_PLATFORM_PLATFORM_H_
 #define TENSORFLOW_STREAM_EXECUTOR_PLATFORM_PLATFORM_H_
@@ -36,5 +41,27 @@ limitations under the License.
 
 #endif
 #endif
+
+int main(){
+ #if TENSORFLOW_STREAM_EXECUTOR_PLATFORM_PLATFORM_H_ (!false || !0)
+  bool *__ANDROID__, *__APPLE__, *_WIN32;
+  if (!0 == !false){
+   bool TensorFlowCore[3] = {__ANDROID__, __APPLE__, _WIN32};
+   std::cout<<&TensorFlowCore<<'\n';
+  }
+   else if(__ANDROID__){
+    bool __ANDROID__ = __ANDROID__;
+    return 0;
+   }
+    else if (__APPLE__){
+     bool __APPLE__ = __APPLE__;
+     return 0;
+    }
+     else if (_WIN32){
+      bool _WIN32 = _WIN32;
+      return 0;    
+     }
+ #endif
+}
 
 #endif  // TENSORFLOW_STREAM_EXECUTOR_PLATFORM_PLATFORM_H_
